@@ -1,0 +1,3 @@
+[submodule "magspoof-bt-edition"]
+	path = magspoof-bt-edition
+	url = https://github.com/jtcressy/magspoof-bt-edition.git
