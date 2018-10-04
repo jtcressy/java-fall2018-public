@@ -1,5 +1,6 @@
-package com.github.jtcressy.kattis;
+package com.github.jtcressy.kattis.countingstars;
 
+import com.github.jtcressy.kattis.countingstars.CountingStars;
 import org.junit.Test;
 
 import java.util.List;

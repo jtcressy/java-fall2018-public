@@ -1,4 +1,4 @@
-package com.github.jtcressy.kattis;
+package com.github.jtcressy.kattis.countingstars;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;

@@ -1,12 +1,9 @@
-package com.github.jtcressy.kattis;
+package com.github.jtcressy.kattis.addingwords;
 // Kattis Problem: https://open.kattis.com/problems/addingwords
 // Accepted Submission: https://open.kattis.com/submissions/3056533
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.function.Function;
 
 interface AWFns {
     void calc(String[] args);

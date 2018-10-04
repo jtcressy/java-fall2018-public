@@ -1,5 +1,6 @@
-package com.github.jtcressy.kattis;
+package com.github.jtcressy.kattis.addingwords;
 
+import com.github.jtcressy.kattis.addingwords.AddingWords;
 import org.junit.Test;
 
 
