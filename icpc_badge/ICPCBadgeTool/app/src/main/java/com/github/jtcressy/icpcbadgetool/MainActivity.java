@@ -18,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.skydoves.colorpickerpreference.ColorPickerView;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements BleScanDialogResu
     private TextView messageTextView;
     private LinearLayout colorPreview;
     private LinearLayout colorActual;
+    private SeekBar brightnessSlider;
 
     private BluetoothAdapter mBluetoothAdapter;
     private BadgeManager badgeManager;
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements BleScanDialogResu
                 }
             }
         });
-
+        brightnessSlider = findViewById(R.id.brightness_slider);
         colorPreview = findViewById(R.id.color_preview);
         colorActual = findViewById(R.id.color_actual);
         ColorPickerView colorPickerView = findViewById(R.id.colorPickerView);
@@ -80,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements BleScanDialogResu
             if (background instanceof ColorDrawable) {
                 color = ((ColorDrawable) background).getColor();
             }
+            int brightness = brightnessSlider.getProgress();
+            color += (brightness << 24);
             badgeManager.sendLedColor(color);
         });
         firstNameSendButton = findViewById(R.id.fname_send_button);

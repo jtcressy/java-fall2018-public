@@ -13,4 +13,11 @@
     <string name="device_name_filter">icpc_badge_</string>
     <string name="device_default_name">Unknown</string>
     <string name="device_status_disconnecting">Disconnecting…</string>
+    <string name="label_color_preview">Preview:</string>
+    <string name="label_color_actual">Current:</string>
+    <string name="color_apply_button">Apply</string>
+    <string name="label_brightness">Brightness:</string>
+    <string name="label_first_name">First Name</string>
+    <string name="label_last_name">Last Name</string>
+    <string name="label_send_message">Send Message</string>
 </resources>

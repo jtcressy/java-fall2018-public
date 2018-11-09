@@ -87,15 +87,14 @@ public:
         {
             uint32_t c = 0;
             const char* chrs = pChar->getValue().c_str();
-
+            auto brightness = (uint8_t) chrs[0];
             auto r = (uint8_t) chrs[1];
             auto g = (uint8_t) chrs[2];
             auto b = (uint8_t) chrs[3];
-            c = (r << 16) | (g << 8) | (b << 0);
-            // Serial.println(pChar->getValue().c_str());
             for (auto &led : leds) {
                 led = CRGB(r, g, b);
             }
+            FastLED.setBrightness(brightness);
             FastLED.show();
         }
         prefs.end();
@@ -116,7 +115,6 @@ public:
         else if (uuid.equals(BLEUUID(BT_RGB_LED_COLOR)))
         {
             uint32_t c = 0;
-            leds[0].
             c = (leds[0].red << 16) | (leds[0].green << 8) | (leds[0].blue << 0);
             pChar->setValue(c);
         }

@@ -57,14 +57,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <SeekBar
+                android:id="@+id/brightness_slider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:max="255"
+                android:progress="255"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <com.skydoves.colorpickerpreference.ColorPickerView
                 android:id="@+id/colorPickerView"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
+                android:layout_width="250dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="w,1:1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/brightness_slider"
                 app:palette="@drawable/palette"
                 app:selector="@drawable/wheel">
 
@@ -75,23 +88,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Preview:"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_color_preview"
                 app:layout_constraintStart_toEndOf="@+id/colorPickerView"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/brightness_slider" />
 
             <TextView
                 android:id="@+id/color_actual_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Current:"
+                android:text="@string/label_color_actual"
                 app:layout_constraintBottom_toTopOf="@+id/color_actual"
                 app:layout_constraintStart_toEndOf="@+id/colorPickerView" />
 
             <LinearLayout
                 android:id="@+id/color_preview"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="0dp"
                 android:layout_marginStart="8dp"
                 android:background="@color/colorAccent"
                 android:orientation="horizontal"
@@ -104,7 +118,7 @@
             <LinearLayout
                 android:id="@+id/color_actual"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/colorAccent"
@@ -119,10 +133,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Apply"
+                android:text="@string/color_apply_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/colorPickerView" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/label_brightness"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -153,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:ems="10"
-                android:hint="First Name"
+                android:hint="@string/label_first_name"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toStartOf="@+id/fname_send_button"
                 app:layout_constraintStart_toStartOf="parent"
@@ -165,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:ems="10"
-                android:hint="Last Name"
+                android:hint="@string/label_last_name"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toStartOf="@+id/lname_send_button"
                 app:layout_constraintStart_toStartOf="parent"
@@ -213,14 +237,13 @@
             <EditText
                 android:id="@+id/message_textview"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:ems="10"
-                android:hint="Send Message"
+                android:hint="@string/label_send_message"
                 android:inputType="textShortMessage"
                 android:selectAllOnFocus="true"
                 android:singleLine="false"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/message_send_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -228,12 +251,12 @@
             <Button
                 android:id="@+id/message_send_button"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:text="@string/send_button"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 

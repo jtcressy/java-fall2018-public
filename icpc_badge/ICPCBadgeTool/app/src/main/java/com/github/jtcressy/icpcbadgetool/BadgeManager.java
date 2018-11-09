@@ -126,6 +126,7 @@ public class BadgeManager extends BleManager<BadgeManagerCallbacks> {
         readCharacteristic(mLedChar).with(mLedCallback).enqueue();
     }
 
+
     void sendFirstName(final String value) {
         if (mFirstNameChar == null) return;
         byte[] bytes = value.getBytes();
