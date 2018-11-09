@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ICPC Badge Tool</string>
+
+    <string name="device_status_label">Device Status:</string>
+    <string name="device_status_text_connected">Connected</string>
+    <string name="device_status_text_disconnected">Disconnected</string>
+    <string name="device_status_connect_button_connected">Disconnect</string>
+    <string name="device_status_connect_button_disconnected">Connect</string>
+    <string name="device_status_connecting">Connecting…</string>
+    <string name="send_button">Send</string>
+    <string name="set_button">Set</string>
+    <string name="apply_button">Apply</string>
+    <string name="device_name_filter">icpc_badge_</string>
+    <string name="device_default_name">Unknown</string>
+    <string name="device_status_disconnecting">Disconnecting…</string>
+</resources>
