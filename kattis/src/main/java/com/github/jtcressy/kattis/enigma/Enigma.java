@@ -1,5 +1,6 @@
 package com.github.jtcressy.kattis.enigma;
 
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -12,7 +13,11 @@ public class Enigma {
     private int cols;
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        System.out.print(handleInput(System.in));
+    }
+
+    public static String handleInput(InputStream input) {
+        Scanner sc = new Scanner(input);
         int R, C;
         ArrayList<String> G = new ArrayList<String>();
         ArrayList<String> WORDS = new ArrayList<String>();
@@ -27,7 +32,7 @@ public class Enigma {
             WORDS.add(sc.nextLine());
         }
         Enigma enigma = new Enigma(G, WORDS, R, C);
-        System.out.print(enigma.process());
+        return enigma.process();
     }
 
     public Enigma(ArrayList<String> grid, ArrayList<String> words, int rows, int cols) {
@@ -41,7 +46,8 @@ public class Enigma {
     }
 
     public String process() {
+        StringBuilder sb = new StringBuilder();
         //do work here and return output
-        return "";
+        return sb.toString();
     }
 }
